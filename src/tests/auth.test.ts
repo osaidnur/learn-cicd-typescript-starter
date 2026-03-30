@@ -15,8 +15,6 @@ describe("getAPIKey", () => {
   });
 
   it("returns the API key when header uses ApiKey scheme", () => {
-    expect(getAPIKey({ authorization: "ApiKey token-123" })).toBe(
-      "token-123",
-    );
+    expect(getAPIKey({ authorization: "ApiKey token-123" })).toBe("token-123");
   });
 });
