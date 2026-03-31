@@ -38,14 +38,14 @@ jobs:
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
 
-      - name: 'Build to Artifact Registry'
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/qwiklabs-gcp-01-3f9e91652398/notely-ar-repo/test:latest .
+      # - name: 'Build to Artifact Registry'
+      #   run: gcloud builds submit --tag us-central1-docker.pkg.dev/qwiklabs-gcp-01-3f9e91652398/notely-ar-repo/test:latest .
       
 
       - name: 'Run Migrations'
         run: npm run db:migrate
 
-      - name: Deploy to Cloud Run
-        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/qwiklabs-gcp-01-3f9e91652398/notely-ar-repo/test:latest --region us-central1 --allow-unauthenticated --project qwiklabs-gcp-01-3f9e91652398 --max-instances=4
+      # - name: Deploy to Cloud Run
+      #   run: gcloud run deploy notely --image us-central1-docker.pkg.dev/qwiklabs-gcp-01-3f9e91652398/notely-ar-repo/test:latest --region us-central1 --allow-unauthenticated --project qwiklabs-gcp-01-3f9e91652398 --max-instances=4
 
       
