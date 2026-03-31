@@ -10,10 +10,11 @@ import { handlerUsersCreate, handlerUsersGet } from "./api/users.js";
 
 const __dirname = path.resolve();
 
-if (!config.api.port) {
-  console.error("PORT environment variable is not set");
-  process.exit(1);
-}
+// if (!config.api.port) {
+//   console.error("PORT environment variable is not set");
+//   process.exit(1);
+// }
+const port = process.env.PORT || config.api.port || 8080;
 
 const app = express();
 app.use(express.json());
