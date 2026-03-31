@@ -46,6 +46,4 @@ jobs:
         run: npm run db:migrate
 
       - name: Deploy to Cloud Run
-        run: gcloud run deploy notely --image europe-west1-docker.pkg.dev/qwiklabs-gcp-01-3f9e91652398/notely-ar-repo/test:latest --region europe-west1 --allow-unauthenticated --project qwiklabs-gcp-01-3f9e91652398 --max-instances=4
-
-      
+        run: gcloud run deploy notely --image europe-west1-docker.pkg.dev/qwiklabs-gcp-03-530540bf76ac/notely-ar-repo/test:latest --region europe-west1 --allow-unauthenticated --project qwiklabs-gcp-03-530540bf76ac --max-instances=4
